@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tiempo Real</title>
+  <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+<!-- carrito.ejs -->
+<ul id="cartsList">
+  </ul>
+
+<!-- carrito.handlebars -->
+<h1>Carrito de Compras</h1>
+<ul>
+    {{#each cart}}
+        <li>
+            <strong>ID:</strong> {{this.product._id}}<br>
+            <strong>Título:</strong> {{this.product.title}}<br>
+            <strong>Precio:</strong> ${{this.product.price}}<br>
+           
+            <strong>Cantidad:</strong> {{this.quantity}}<br>
+        </li>
+    {{/each}}
+</ul>
+<script src="/js/carrito.js"></script>
+
+</body>
+</html>
